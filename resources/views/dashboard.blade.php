@@ -6,10 +6,29 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
+        <div class="container">
+            <div class="row">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Numara</th>
+                        <th scope="col">İsim</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Oluşturulma Tarihi</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+
+                    </tbody>
+                </table>
             </div>
         </div>
+
     </div>
 </x-app-layout>
