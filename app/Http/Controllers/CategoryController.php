@@ -6,6 +6,7 @@ use App\Models\Category;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class CategoryController extends Controller
 {
@@ -36,5 +37,22 @@ class CategoryController extends Controller
         $category->user_id = Auth::user()->id;
         $category->save();
         */
+    }
+
+    public function Edit($id){
+        $categories = Category::find($id);
+
+        return view('admin.category.edit',compact('categories'));
+    }
+
+    public function Update(Request $request , $id){
+        $update = Category::find($id)->update([
+            'category_name' => $request->category_name,
+            'user_id' => Auth::user()->id
+        ]);
+
+        return Redirect()->route('all.category')->with('success','Category Updated Successfully');
+
+
     }
 }
