@@ -93,7 +93,7 @@
         </div>
     </div>
     <div class="copyright pl-0">
-        <p class="text-center">&copy; 2122 Copyright
+        <p class="text-center">&copy; 2022 Copyright
             <a class="text-primary" href="https://www.linkedin.com/in/elif-bahar-%C3%B6zdo%C4%9Fru/" target="_blank">Elif Bahar Özdoğru</a>.
         </p>
     </div>
