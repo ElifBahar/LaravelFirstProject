@@ -86,4 +86,15 @@ class HomeController extends Controller
 
 
     }
+
+    public function SliderDelete($id){
+        $slider_item = Slider::find($id);
+        $slider_image = $slider_item->image;
+        unlink($slider_image);
+
+
+        Slider::find($id)->delete();
+
+        return Redirect()->back()->with('success','Slider Deleted Successfully');
+    }
 }
