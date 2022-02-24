@@ -56,6 +56,8 @@ Route::get('/slider/delete/{id}',[HomeController::class, 'SliderDelete']);
 
 // Home About
 Route::get('/home/about',[AboutController::class, 'HomeAbout'])->name('home.about');
+Route::get('/add/about',[AboutController::class, 'AddAbout'])->name('add.about');
+Route::post('/store/about',[AboutController::class, 'StoreAbout'])->name('store.about');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
