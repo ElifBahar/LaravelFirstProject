@@ -23,11 +23,11 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th scope="col">SL No</th>
-                                <th scope="col">Slider Title</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Action</th>
+                                <th scope="col" width="5%">SL No</th>
+                                <th scope="col" width="15%">Slider Title</th>
+                                <th scope="col" width="25%">Description</th>
+                                <th scope="col" width="15%">Image</th>
+                                <th scope="col" width="15%">Action</th>
                             </tr>
                             </thead>
                             <tbody>
