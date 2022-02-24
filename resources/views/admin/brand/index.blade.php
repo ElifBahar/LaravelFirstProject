@@ -36,8 +36,10 @@
                                     <td>@if($brand->created_at == NULL)
                                             <span class="text-damger">No Date Set</span>
                                         @else
-                                            {{ $brand->created_at->diffForHumans() }}</td>
-                                    @endif
+                                            {{ $brand->created_at->diffForHumans() }}
+                                        @endif
+                                    </td>
+
                                     <td><a href="{{ url('brand/edit/'.$brand->id) }}" class="btn btn-info">Edit</a>
                                         <a href="{{ url('brand/delete/'.$brand->id) }}" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger">Delete</a>
                                     </td>
