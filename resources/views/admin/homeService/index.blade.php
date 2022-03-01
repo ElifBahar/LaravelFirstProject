@@ -3,12 +3,15 @@
 @section('admin')
 
     <div class="py-12">
+        <h4>Home / Services</h4>
+        <hr>
         <div class="container">
+
             <div class="row">
-                <h4>Home About</h4>
-                <br><br>
+
+
                 <a href="{{ route('add.service') }}"><button class="btn btn-info">Add Service</button></a>
-                <br><br>
+
                 <div class="col-md-12">
                     <div class="card">
                         @if(session('success'))
@@ -22,9 +25,8 @@
                             <thead>
                             <tr>
                                 <th scope="col" width="5%">SL No</th>
-                                <th scope="col" width="15%">Home Title</th>
-                                <th scope="col" width="25%">Short Description</th>
-                                <th scope="col" width="15%">Long Description</th>
+                                <th scope="col" width="15%">Service Title</th>
+                                <th scope="col" width="25%">Service Description</th>
                                 <th scope="col" width="15%">Action</th>
                             </tr>
                             </thead>
@@ -36,8 +38,8 @@
                                     <td>{{ $service->title }}</td>
                                     <td>{{ $service->description }}</td>
 
-                                    <td><a href="{{ url('about/edit/'.$service->id) }}" class="btn btn-info">Edit</a>
-                                        <a href="{{ url('about/delete/'.$service->id) }}" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger">Delete</a>
+                                    <td><a href="{{ route('edit.service',$service->id) }}" class="btn btn-info">Edit</a>
+                                        <a href="{{ route('delete.service',$service->id) }}" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

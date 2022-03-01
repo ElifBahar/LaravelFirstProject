@@ -29,4 +29,28 @@ class ServiceController extends Controller
         return Redirect()->route('home.service')->with('success','Service Created Successfully');
 
     }
+
+    public function EditService($id){
+
+        $homeservice = HomeService::find($id);
+        return view('admin.homeService.edit', compact('homeservice'));
+    }
+
+    public function UpdateService(Request $request, $id){
+
+        $update = HomeService::find($id)->update([
+            'title' => $request->title,
+            'description' => $request->description,
+        ]);
+
+        return Redirect()->route('home.service')->with('success','Service Updated Successfully');
+
+    }
+
+    public function DeleteService($id){
+        $delete = HomeService::find($id)->delete();
+
+        return Redirect()->back()->with('success','Service Deleted Successfully');
+
+    }
 }
