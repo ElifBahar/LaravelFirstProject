@@ -34,6 +34,8 @@
         </div>
 
         <div class="row">
+            @if($services != null)
+                @foreach($services as $service)
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                 <div class="icon-box iconbox-blue">
                     <div class="icon">
@@ -42,75 +44,14 @@
                         </svg>
                         <i class="bx bxl-dribbble"></i>
                     </div>
-                    <h4><a href="">Lorem Ipsum</a></h4>
-                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                    <h4><a href="">{{ $service -> title }}</a></h4>
+                    <p>{{ $service -> description }}</p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-box iconbox-orange ">
-                    <div class="icon">
-                        <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
 
-                        </svg>
-                        <i class="bx bx-file"></i>
-                    </div>
-                    <h4><a href="">Sed Perspiciatis</a></h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                <div class="icon-box iconbox-pink">
-                    <div class="icon">
-                        <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-
-                        </svg>
-                        <i class="bx bx-tachometer"></i>
-                    </div>
-                    <h4><a href="">Magni Dolores</a></h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="icon-box iconbox-yellow">
-                    <div class="icon">
-                        <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-
-                        </svg>
-                        <i class="bx bx-layer"></i>
-                    </div>
-                    <h4><a href="">Nemo Enim</a></h4>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-box iconbox-red">
-                    <div class="icon">
-                        <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-
-                        </svg>
-                        <i class="bx bx-slideshow"></i>
-                    </div>
-                    <h4><a href="">Dele Cardo</a></h4>
-                    <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-                <div class="icon-box iconbox-teal">
-                    <div class="icon">
-                        <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-
-                        </svg>
-                        <i class="bx bx-arch"></i>
-                    </div>
-                    <h4><a href="">Divera Don</a></h4>
-                    <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-                </div>
-            </div>
+                @endforeach
+            @endif
 
         </div>
 

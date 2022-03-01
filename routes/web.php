@@ -22,7 +22,8 @@ use App\Models\User;
 Route::get('/', function () {
     $brands = DB::table('brands')->get();
     $abouts = DB::table('home_abouts')->first();
-    return view('home',compact('brands','abouts'));
+    $services = DB::table('home_services')->get();
+    return view('home',compact('brands','abouts','services'));
 });
 
 //Category
