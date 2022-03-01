@@ -66,6 +66,7 @@ Route::get('/about/delete/{id}',[AboutController::class, 'DeleteAbout']);
 
 //Home Service
 Route::get('/home/service',[ServiceController::class, 'HomeService'])->name('home.service');
+Route::get('/add/service',[ServiceController::class, 'AddService'])->name('add.service');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $users = User::all();

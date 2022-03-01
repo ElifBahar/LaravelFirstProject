@@ -7,7 +7,7 @@
             <div class="row">
                 <h4>Home About</h4>
                 <br><br>
-                <a href=""><button class="btn btn-info">Add Service</button></a>
+                <a href="{{ route('add.service') }}"><button class="btn btn-info">Add Service</button></a>
                 <br><br>
                 <div class="col-md-12">
                     <div class="card">
