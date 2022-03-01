@@ -8,6 +8,7 @@ use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use App\Models\Multipic;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +24,8 @@ Route::get('/', function () {
     $brands = DB::table('brands')->get();
     $abouts = DB::table('home_abouts')->first();
     $services = DB::table('home_services')->get();
-    return view('home',compact('brands','abouts','services'));
+    $images =  Multipic::all();
+    return view('home',compact('brands','abouts','services','images'));
 });
 
 //Category
