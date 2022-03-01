@@ -8,7 +8,7 @@
                 <h2>Home Page/Services - Create</h2>
             </div>
             <div class="card-body">
-                <form action="" method="POST">
+                <form action="{{ route('store.service') }}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Service Title :</label>
@@ -18,7 +18,7 @@
 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Service Description :</label>
-                        <textarea name="short_des" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
 
 
