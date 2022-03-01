@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -62,6 +63,9 @@ Route::post('/store/about',[AboutController::class, 'StoreAbout'])->name('store.
 Route::get('/about/edit/{id}',[AboutController::class, 'EditAbout']);
 Route::post('/update/homeabout/{id}',[AboutController::class, 'UpdateAbout']);
 Route::get('/about/delete/{id}',[AboutController::class, 'DeleteAbout']);
+
+//Home Service
+Route::get('/home/service',[ServiceController::class, 'HomeService'])->name('home.service');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $users = User::all();
